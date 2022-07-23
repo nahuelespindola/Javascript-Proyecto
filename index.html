@@ -2,19 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript
-    </title>
+
+
+   <title>Dolarify Conversor</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Dolarify, El conversor de moneda mas eficiente">
+   <meta name="keywords" content="Conversor, Converter, Dolar, $USD, Peso Argentino, Dolar Blue, Dolarify">
+   <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/90c888b6e4.js" crossorigin="anonymous"></script>
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
 
-<body>
-<div>
-    <h1>Curso Coderhouse</h1>
-    <h2>Proyecto Javascript</h2>
-</div>
-<script src="app.js"></script>
+<body class="indexbody d-flex flex-column min-vh-100">
+   <!-- NavBar Bootstrap -->
+   <header>
+      <nav class="navbar navbar-expand-lg bg-black navbar-main">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Dolarify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon">
+                  <i class="fas fa-bars" style="color:rgba(255, 255, 255, 0.835); font-size:28px;"></i>
+               </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <div class="nav ms-auto">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="">Iniciar sesion</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="">Idioma(ES)</a>
+                     </li>
+               </div>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <!-- Fin NavBar Bootstrap -->
+   <!-- Section -->
+   <section>
+      <div class="form-title">
+         <h1>Conversor peso a dolar</h1>
+         <h3>La cotización en tiempo real por dolar es de 342$</h3>
+      </div>
+      <div>
+         <form class="input">
+            <h4>Ingrese el valor que desea convertir</h4>
+            <input type="number" placeholder="ARG Peso Argentino" required> Es igual a
+            <input type="number" placeholder="USD Usd">
+         </form>
+      </div>
+   </section>
+   <!-- Fin Section -->
+   <!-- Footer -->
+   <footer class="footer mt-auto">
+      <p>Copyright &copy;,<a class="behanceto" href="https://www.behance.net/nahuelespindola1"> Nahuel Espindola </a>
+         <address><a class="mailto" href="mailto:nahuelschbap@hotmail.com">nahuelschbap@hotmail.com</a></address>
+   </footer>
+   <script src="app.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+
 
 </html>

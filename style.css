@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header .navbar-main .active {
+  text-decoration: underline white;
+  text-underline-offset: 30%;
+}
+header .container-fluid a {
+  color: white;
+}
+header .nav-item a {
+  color: white;
+}
+header a.nav-link:hover {
+  color: gray;
+}
+header a.navbar-brand:hover {
+  color: gray;
+}
+header nav ul li {
+  list-style: none;
+  float: left;
+}
+.footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+.footer .behanceto {
+  text-decoration: none;
+  color: white;
+}
+.footer .mailto {
+  text-decoration: none;
+  color: white;
+}
+.footer .mailto:hover {
+  color: gray;
+}
+.footer .behanceto:hover {
+  color: gray;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+section .form-title {
+  padding: 30px;
+}
+.input h4 {
+  padding: 10px;
+}
