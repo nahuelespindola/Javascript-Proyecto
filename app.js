@@ -1,12 +1,3 @@
-const valorDolar = 342
-
-let pesosArgentinos = prompt("Ingrese cuantos pesos Argentinos desea convertir")
-let mensajeSalida = "Bienvenido " + ". Ese valor equivale a :" + (pesosArgentinos / valorDolar) + " dolares ($USD)";
-
-
-console.log(pesosArgentinos)
-alert(mensajeSalida)
-
 
 // Objetos & Array - Listado de cambios //
 const monedas = [
@@ -48,20 +39,10 @@ const monedas = [
 ]
 console.log(monedas)
 
-//iterador
-for (let i = 0; i < monedas.length; i++) {
-    console.log(monedas[i])
-}
-console.log(monedas.length)
 
-//Selector
-    const nombre = prompt('Ingrese a que moneda desea convertir sus pesos')
-    {
-        for (let i = 0; i < monedas.length; i++){
-        if (nombre == monedas[i]) {
-            alert("Esta moneda se encuentra disponible")
-        }
-    }
-    }
-       
- 
+    //DOM + Evento//
+
+    const input = document.getElementById("pesoargentino")
+    input.addEventListener('keypress', () => {
+
+    })
