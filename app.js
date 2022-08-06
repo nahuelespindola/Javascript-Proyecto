@@ -42,7 +42,13 @@ console.log(monedas)
 
     //DOM + Evento//
 
-    const input = document.getElementById("pesoargentino")
+    var input = document.getElementById("pesoargentino")
+    var output = document.getElementById('dolar')
     input.addEventListener('keypress', () => {
+output.setAttribute('value', input.value / 300)
+    })
 
+    var invertir = document.getElementById('Invertir')
+    invertir.addEventListener('click', () => {
+        
     })
