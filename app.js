@@ -42,13 +42,16 @@ console.log(monedas)
 
     //DOM + Evento//
 
-    var input = document.getElementById("pesoargentino")
-    var output = document.getElementById('dolar')
+    const input = document.getElementById("input")
+    const output = document.getElementById('output')
     input.addEventListener('keypress', () => {
-output.setAttribute('value', input.value / 300)
+output.setAttribute('value', input.value / 30)
     })
 
-    var invertir = document.getElementById('Invertir')
-    invertir.addEventListener('click', () => {
-        
-    })
+
+    //SELECTOR
+
+    const dolarblue = document.querySelector('.USDB');
+    USDB.addEventListener('click', () => {
+        output.setAttribute('value', input.value * 30)
+            })

@@ -51,17 +51,53 @@
    <section>
       <div class="form-title">
          <h1>Conversor peso a dolar</h1>
-         <h3>La cotización en tiempo real por dolar es de 342$</h3>
+         <h3>La cotización en tiempo real por dolar es de 300$</h3>
       </div>
       <div>
-      
+
          <form class="input">
-            <h4>Ingrese el valor que desea convertir</h4>
-            <div><button class="Invertir-Button" id="Invertir">Invertir</button></div>
-            <input id="pesoargentino" type="number" placeholder="ARG Peso Argentino" required> Es igual a
-            <input id="dolar" type="number" placeholder="USD Usd">
+            <h4 class="cambio">Ingrese el valor que desea convertir</h4>
+            <div><button class="Invertir-Button" id="invertir">Invertir</button></div>
+            <label>
+               <select id="selector">
+                  <option id="ARS">ARS Peso Argentino
+                  </option>
+                  <option id="USDB">USD Blue
+                  </option>
+                  <option id="USDO">USD Oficial
+                  </option>
+                  <option id="BRL">BRL Real Brasileño
+                  </option>
+                  <option id="EUR">EUR Euro
+                  </option>
+                  <option id="GBP">GBP Libra Esterlina
+                  </option>
+                  <option id="JPY">JPY Yen Japonés
+                  </option>  
+               </select>
+               <input id="input" type="number" placeholder="Ingrese el valor deseado" required>
+            </label>
+            <label>
+            <select>
+               <option id="USDB1">USD Blue
+               </option>
+               <option id="USDO1">USD Oficial
+               </option>
+               <option id="BRL1">BRL Real Brasileño
+               </option>
+               <option id="EUR1">EUR Euro
+               </option>
+               <option id="GBP1">GBP Libra Esterlina
+               </option>
+               <option id="JPY1">JPY Yen Japonés
+               </option>
+               <option id="ARS1">ARS Peso Argentino
+               </option>
+               <input id="output" type="number" placeholder="Es igual a">
+            </select>
+         </label>
          </form>
-         
+
       </div>
    </section>
    <!-- Fin Section -->
