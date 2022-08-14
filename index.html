@@ -51,48 +51,48 @@
    <section>
       <div class="form-title">
          <h1>Conversor peso a dolar</h1>
-         <h3>La cotización en tiempo real por dolar es de 300$</h3>
+         <h3 class="tiemporeal">La cotización en tiempo real por dolar es de 300$</h3>
       </div>
       <div>
-
+         <div><button class="Invertir-Button" id="invertir">Invertir</button></div>
          <form class="input">
             <h4 class="cambio">Ingrese el valor que desea convertir</h4>
-            <div><button class="Invertir-Button" id="invertir">Invertir</button></div>
+            
             <label>
-               <select id="selector">
-                  <option id="ARS">ARS Peso Argentino
+               <select id="selectIzquierda" class="monedas">
+                  <option value="ARS">ARS Peso Argentino
                   </option>
-                  <option id="USDB">USD Blue
+                  <option value="USDB">USD Blue
                   </option>
-                  <option id="USDO">USD Oficial
+                  <option value="USDO">USD Oficial
                   </option>
-                  <option id="BRL">BRL Real Brasileño
+                  <option value="BRL">BRL Real Brasileño
                   </option>
-                  <option id="EUR">EUR Euro
+                  <option value="EUR">EUR Euro
                   </option>
-                  <option id="GBP">GBP Libra Esterlina
+                  <option value="GBP">GBP Libra Esterlina
                   </option>
-                  <option id="JPY">JPY Yen Japonés
+                  <option value="JPY">JPY Yen Japonés
                   </option>  
                </select>
                <input id="input" type="number" placeholder="Ingrese el valor deseado" required>
             </label>
             <label>
-            <select>
-               <option id="USDB1">USD Blue
+            <select id="selectDerecha">
+               <option value="ARS">ARS Peso Argentino
                </option>
-               <option id="USDO1">USD Oficial
+               <option value="USDB">USD Blue
                </option>
-               <option id="BRL1">BRL Real Brasileño
+               <option value="USDO">USD Oficial
                </option>
-               <option id="EUR1">EUR Euro
+               <option value="BRL">BRL Real Brasileño
                </option>
-               <option id="GBP1">GBP Libra Esterlina
+               <option value="EUR">EUR Euro
                </option>
-               <option id="JPY1">JPY Yen Japonés
+               <option value="GBP">GBP Libra Esterlina
                </option>
-               <option id="ARS1">ARS Peso Argentino
-               </option>
+               <option value="JPY">JPY Yen Japonés
+               </option>  
                <input id="output" type="number" placeholder="Es igual a">
             </select>
          </label>
