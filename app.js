@@ -104,13 +104,38 @@ function operacionMatematica(select1, select2) {
 }
 
 //DOM + Evento// 
+
 const selectIzquierda = document.getElementById("selectIzquierda")
+//Storage Moneda Seleccionada
+selectIzquierda.addEventListener('click', () =>{
+    let selectedCoin = document.getElementById("selectIzquierda").value
+    
+    localStorage.setItem('Moneda Seleccionada', selectedCoin)
+}
+)
 const selectDerecha = document.getElementById("selectDerecha")
+//Storage Moneda a Convertir
+selectDerecha.addEventListener('click', () =>{
+    let convertedCoin = document.getElementById("selectDerecha").value
+    console.log(convertedCoin)
+    localStorage.setItem('Moneda a Convertir', convertedCoin)
+}
+)
+
+
 const input = document.getElementById("input")
 const output = document.getElementById('output')
 input.addEventListener('input', () => {
+    
+    
+//Storage VALOR INTRODUCIDO
+    let inputValue = document.getElementById("input").value
+    localStorage.setItem('Valor Introducido', inputValue)
     output.setAttribute('value', input.value * operacionMatematica(selectIzquierda.value, selectDerecha.value))
+    
 })
+
+
 
 //SELECTOR
 const selectMoneda = document.querySelector('.monedas');
@@ -118,5 +143,5 @@ const selectMoneda = document.querySelector('.monedas');
 selectMoneda.addEventListener('change', (event) => {
     const resultado = document.querySelector('.tiemporeal');
     resultado.textContent = `Usted seleccionó ${event.target.value} como moneda de cambio`;
-    console.log(selectMoneda.value)
+    
 });
