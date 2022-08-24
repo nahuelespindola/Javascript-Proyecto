@@ -130,9 +130,13 @@ input.addEventListener('input', () => {
     
 //Storage VALOR INTRODUCIDO
     let inputValue = document.getElementById("input").value
-    let condicion = isNaN(NaN)
+    
+    localStorage.setItem('Valor Introducido', inputValue)
+    output.setAttribute('value', input.value * operacionMatematica(selectIzquierda.value, selectDerecha.value))
+   
+    let condicion = 9
     console.log(condicion)
-    if(condicion == NaN){
+    if(input.value == condicion){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -141,8 +145,6 @@ input.addEventListener('input', () => {
           })
     }
 
-    localStorage.setItem('Valor Introducido', inputValue)
-    output.setAttribute('value', input.value * operacionMatematica(selectIzquierda.value, selectDerecha.value))
     
 })
 
