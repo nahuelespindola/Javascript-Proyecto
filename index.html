@@ -17,6 +17,9 @@
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+   
 </head>
 
 <body class="indexbody d-flex flex-column min-vh-100">
@@ -100,7 +103,17 @@
          </form>
 
       </div>
+     
    </section>
+   <div class="line-charts">
+      <div>
+         <label for="">
+   
+            <canvas id="lineChart" width="400" height="400"></canvas>
+         </label>
+      </div>
+   </div>
+   
    <!-- Fin Section -->
    <!-- Footer -->
    <footer class="footer mt-auto">
@@ -109,6 +122,10 @@
    </footer>
    <script src="app.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+
+  
 </body>
 
 

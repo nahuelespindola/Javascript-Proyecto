@@ -1,3 +1,5 @@
+
+
 // Objetos & Array - Listado de cambios //
 const conversionaPeso = [{
         id: 1,
@@ -134,20 +136,30 @@ input.addEventListener('input', () => {
     localStorage.setItem('Valor Introducido', inputValue)
     output.setAttribute('value', input.value * operacionMatematica(selectIzquierda.value, selectDerecha.value))
    
-    let condicion = 9
+
+    
+
+    let condicion = 0
     console.log(condicion)
     if(input.value == condicion){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
-            footer: '<a href="">Why do I have this issue?</a>'
+            text: 'No coloques letras, solo numeros!',
+            footer: '<a href="">Porque estoy viendo esta alerta?</a>'
           })
     }
 
     
 })
 
+//OPERADOR 
+  // condicion = 0 ? : Swal.fire({
+  //          icon: 'error',
+  //          title: 'Oops...',
+  //          text: 'No coloques letras, solo numeros!',
+  //          footer: '<a href="">Porque estoy viendo esta alerta?</a>'
+  //        })
 
 
 //SELECTOR
@@ -158,3 +170,63 @@ selectMoneda.addEventListener('change', (event) => {
     resultado.textContent = `Usted seleccionó ${event.target.value} como moneda de cambio`;
     
 });
+
+ 
+
+
+
+
+
+// ChartJS
+
+ const CHART = document.getElementById('lineChart').getContext('2d');
+ const labels = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+  ];
+  const data = {
+    labels: labels
+  };
+
+  //CONFIG
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Line Chart'
+        }
+      }
+    },
+  };
+ const lineChart = new Chart(CHART, {
+    
+type: 'line',
+data: {
+    labels: labels,
+    datasets: [{
+      label: 'Cotización Dolar Oficial a Peso Argentino 2022',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [102, 105, 108, 112, 116, 121, 126, 137, ],
+    }
+]
+    
+  }
+  
+});
+
+   
+   //CHART-2

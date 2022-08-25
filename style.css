@@ -61,3 +61,12 @@ section .form-title {
   margin-bottom: 10px;
 
 }
+.line-charts{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
