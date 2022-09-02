@@ -240,13 +240,13 @@ const dolartiemporeal = document.getElementById("tiemporeal")
    .then((res) => {return res.json()})
    .then((data) => {
     console.log(data)
-data.forEach((post) =>{
+
     const li = document.createElement('li')
     li.innerHTML = `
-    <h3>${data.compra}</h3>
+    <h3>${data[0].casa.compra}</h3>
     `
     dolartiemporeal.append(li)
-   })  
+   
 }
 )
     
