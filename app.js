@@ -234,23 +234,20 @@ data: {
 
    //FETCH//
 
-const tiemporeal = document.getElementById('tiemporeal')
-
+const dolartiemporeal = document.getElementById("tiemporeal")
 
    fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
-   .then((res) => {
-    return res.json()
-   }
-   )
+   .then((res) => {return res.json()})
    .then((data) => {
-
-const li = document.createElement('li')
-li.innerHTML = `
-<h3>${data.agencia}</h3>
-<p>${data.compra}</p>
-`
-
-
     console.log(data)
-   })
-   
+data.forEach((post) =>{
+    const li = document.createElement('li')
+    li.innerHTML = `
+    <h3>${data.compra}</h3>
+    `
+    dolartiemporeal.append(li)
+   })  
+}
+)
+    
+  
