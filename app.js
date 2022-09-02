@@ -230,3 +230,27 @@ data: {
 
    
    //CHART-2
+
+
+   //FETCH//
+
+const tiemporeal = document.getElementById('tiemporeal')
+
+
+   fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+   .then((res) => {
+    return res.json()
+   }
+   )
+   .then((data) => {
+
+const li = document.createElement('li')
+li.innerHTML = `
+<h3>${data.agencia}</h3>
+<p>${data.compra}</p>
+`
+
+
+    console.log(data)
+   })
+   
