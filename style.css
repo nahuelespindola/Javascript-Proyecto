@@ -11,7 +11,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.lupa{
+position: absolute;
+  width: 20%;
+  padding-top: 200px;
+  padding-left: 50px;
+  opacity: 0;
+}
+.aparecer-lupa{
+  position: absolute;
+  width: 20%;
+  padding-top: 200px;
+  padding-left: 50px;
+  opacity: 1;
+}
 .navbar{
   background-color: #0558C5;
 }
@@ -71,6 +84,14 @@
   width: 60%;
 }
 
+.lottie-lupa{
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+.lottie-lupa.fade{
+  opacity: 0;
+}
 header .navbar-main .active {
   text-decoration: underline white;
   text-underline-offset: 30%;

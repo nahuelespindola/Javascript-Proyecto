@@ -5,6 +5,13 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: 'https://assets1.lottiefiles.com/packages/lf20_06a6pf9i.json'
 })
+var animationlupa = bodymovin.loadAnimation({
+    container: document.getElementById('lottie-lupa'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets3.lottiefiles.com/packages/lf20_r0qg8ael.json'
+})
 
 
 
@@ -259,3 +266,9 @@ const dolartiemporeal = document.getElementById("tiemporeal")
 )
     
   
+  const lottielupa = document.getElementById('lottie-lupa')
+  const quienesSomos = document.getElementById('quienes-somos-animation')
+  quienesSomos.addEventListener('onclick', () =>{
+    lottielupa.classList.toggle('aparecer-lupa')
+  })
+  console.log(quienesSomos)
