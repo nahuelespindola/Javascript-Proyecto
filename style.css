@@ -1,8 +1,76 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url(Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(Roboto-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.navbar{
+  background-color: #0558C5;
+}
+
+.fondo-quienessomos{
+  display: flex;
+  background-color: #0558C5;
+  border-radius: 0px 0px 100% 100%;
+  
+  animation-name: bg;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+@keyframes bg{
+  from {
+    
+    border-radius: 0px 0px 30% 50%;
+  }
+ to {
+    border-radius: 0px 0px 100% 100%;
+    
+  }
+  to {
+    border-radius: 0px 0px 80% 70%;
+    
+  }
+}
+
+.quienes-somos{
+  padding-bottom: 0px;
+}
+.quienes-somos h1{
+  font-size: 6rem;
+  padding-left: 60px;
+  padding-top: 20px;
+  color: white;
+  font-family: 'Oswald';
+}
+.quienes-somos h2{
+  padding-top: 10px;
+  padding-left: 100px;
+  font-family: 'Oswald';
+  color: white;
+}
+.quienes-somos h5{
+  font-family: 'Roboto';
+  color: white;
+  padding-top: 30px;
+  font-size: 0.9rem;
+  padding-left: 120px;
+}
+.lottie{
+  
+  width: 60%;
+}
+
 header .navbar-main .active {
   text-decoration: underline white;
   text-underline-offset: 30%;
@@ -42,7 +110,7 @@ header nav ul li {
 .footer .behanceto:hover {
   color: gray;
 }
-section {
+.conversor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,10 +125,7 @@ section .form-title {
 .input h4 {
   padding: 10px;
 }
-.Invertir-Button{
-  margin-bottom: 10px;
 
-}
 .line-charts{
   display: flex;
   align-items: center;

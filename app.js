@@ -1,3 +1,11 @@
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets1.lottiefiles.com/packages/lf20_06a6pf9i.json'
+})
+
 
 
 // Objetos & Array - Listado de cambios //
@@ -18,23 +26,23 @@ const conversionaPeso = [{
     },
     {
         id: 4,
-        nombre: "Real",
-        valor: 26.5
+        nombre: "Dolar Contado con Liquidacion",
+        valor: 290
     },
     {
         id: 5,
-        nombre: "Euro",
-        valor: 138.008
+        nombre: "Dolar Bolsa",
+        valor: 278
     },
     {
         id: 6,
-        nombre: "Libra Esterlina",
-        valor: 163.254
+        nombre: "Dolar Turista",
+        valor: 255
     },
     {
         id: 7,
-        nombre: "Yen Japones",
-        valor: 1.00769
+        nombre: "Bitcoin",
+        valor: 2643812
     }
 ]
 
@@ -46,27 +54,27 @@ function operacionMatematica(select1, select2) {
             coin = conversionaPeso[2].valor
         }
         break;
-    case "USDB": {
+    case "Dolar Blue": {
         coin = conversionaPeso[1].valor
     }
     break;
-    case "USDO": {
+    case "Dolar Oficial": {
         coin = conversionaPeso[0].valor
     }
     break;
-    case "BRL": {
+    case "Dolar Contado con Liquidación": {
         coin = conversionaPeso[3].valor
     }
     break;
-    case "EUR": {
+    case "Dolar Bolsa": {
         coin = conversionaPeso[4].valor
     }
     break;
-    case "GBP": {
+    case "Dolar Turista": {
         coin = conversionaPeso[5].valor
     }
     break;
-    case "JPY": {
+    case "BTC": {
         coin = conversionaPeso[6].valor
     }
     break;
@@ -85,19 +93,19 @@ function operacionMatematica(select1, select2) {
         coin2 = conversionaPeso[0].valor
     }
     break;
-    case "BRL": {
+    case "USDCCL": {
         coin2 = conversionaPeso[3].valor
     }
     break;
-    case "EUR": {
+    case "USDBOLSA": {
         coin2 = conversionaPeso[4].valor
     }
     break;
-    case "GBP": {
+    case "USDTurista": {
         coin2 = conversionaPeso[5].valor
     }
     break;
-    case "JPY": {
+    case "BTC": {
         coin2 = conversionaPeso[6].valor
     }
     break;
@@ -163,11 +171,11 @@ input.addEventListener('input', () => {
 
 
 //SELECTOR
-const selectMoneda = document.querySelector('.monedas');
+const selectMoneda = document.querySelector('.monedas-derecha');
 
 selectMoneda.addEventListener('change', (event) => {
-    const resultado = document.querySelector('.tiemporeal');
-    resultado.textContent = `Usted seleccionó ${event.target.value} como moneda de cambio`;
+    const resultado = document.querySelector('.selector-tiemporeal');
+    resultado.textContent = `La cotización en tiempo real de peso Argentino por ${event.target.value} es de`
     
 });
 
