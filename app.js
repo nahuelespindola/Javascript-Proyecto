@@ -10,9 +10,8 @@ var animationlupa = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://assets3.lottiefiles.com/packages/lf20_r0qg8ael.json'
+    path: 'https://assets7.lottiefiles.com/packages/lf20_Fl9YWn.json'
 })
-
 
 
 // Objetos & Array - Listado de cambios //
@@ -33,7 +32,7 @@ const conversionaPeso = [{
     },
     {
         id: 4,
-        nombre: "Dolar Contado con Liquidacion",
+        nombre: "Dolar Contado con Liqui",
         valor: 290
     },
     {
@@ -43,7 +42,7 @@ const conversionaPeso = [{
     },
     {
         id: 6,
-        nombre: "Dolar Turista",
+        nombre: "Dolar turista",
         valor: 255
     },
     {
@@ -69,7 +68,7 @@ function operacionMatematica(select1, select2) {
         coin = conversionaPeso[0].valor
     }
     break;
-    case "Dolar Contado con Liquidación": {
+    case "Dolar Contado con Liqui": {
         coin = conversionaPeso[3].valor
     }
     break;
@@ -77,11 +76,11 @@ function operacionMatematica(select1, select2) {
         coin = conversionaPeso[4].valor
     }
     break;
-    case "Dolar Turista": {
+    case "Dolar turista": {
         coin = conversionaPeso[5].valor
     }
     break;
-    case "BTC": {
+    case "Bitcoin": {
         coin = conversionaPeso[6].valor
     }
     break;
@@ -92,27 +91,27 @@ function operacionMatematica(select1, select2) {
             coin2 = conversionaPeso[2].valor
         }
         break;
-    case "USDB": {
+    case "Dolar Blue": {
         coin2 = conversionaPeso[1].valor
     }
     break;
-    case "USDO": {
+    case "Dolar Oficial": {
         coin2 = conversionaPeso[0].valor
     }
     break;
-    case "USDCCL": {
+    case "Dolar Contado con Liqui": {
         coin2 = conversionaPeso[3].valor
     }
     break;
-    case "USDBOLSA": {
+    case "Dolar Bolsa": {
         coin2 = conversionaPeso[4].valor
     }
     break;
-    case "USDTurista": {
+    case "Dolar turista": {
         coin2 = conversionaPeso[5].valor
     }
     break;
-    case "BTC": {
+    case "Bitcoin": {
         coin2 = conversionaPeso[6].valor
     }
     break;
@@ -134,11 +133,9 @@ const selectDerecha = document.getElementById("selectDerecha")
 //Storage Moneda a Convertir
 selectDerecha.addEventListener('click', () =>{
     let convertedCoin = document.getElementById("selectDerecha").value
-    console.log(convertedCoin)
     localStorage.setItem('Moneda a Convertir', convertedCoin)
 }
 )
-
 
 const input = document.getElementById("input")
 const output = document.getElementById('output')
@@ -155,7 +152,7 @@ input.addEventListener('input', () => {
     
 
     let condicion = 0
-    console.log(condicion)
+    
     if(input.value == condicion){
         Swal.fire({
             icon: 'error',
@@ -177,17 +174,8 @@ input.addEventListener('input', () => {
   //        })
 
 
-//SELECTOR
-const selectMoneda = document.querySelector('.monedas-derecha');
-
-selectMoneda.addEventListener('change', (event) => {
-    const resultado = document.querySelector('.selector-tiemporeal');
-    resultado.textContent = `La cotización en tiempo real de peso Argentino por ${event.target.value} es de`
-    
-});
 
  
-
 
 
 
@@ -246,7 +234,6 @@ data: {
    
    //CHART-2
 
-
    //FETCH//
 
 const dolartiemporeal = document.getElementById("tiemporeal")
@@ -258,17 +245,40 @@ const dolartiemporeal = document.getElementById("tiemporeal")
 
     const li = document.createElement('li')
     li.innerHTML = `
-    <h3>${data[0].casa.compra}</h3>
+    <h3 id= "prueba">${data[0].casa.compra}</h3>
     `
     dolartiemporeal.append(li)
    
 }
 )
+
+//SELECTOR
+
+const selectMoneda = document.querySelector('.monedas-derecha');
+
+selectMoneda.addEventListener('change', (event) => {
+    const resultado = document.querySelector('.selector-tiemporeal');
+    resultado.textContent = `La cotización en tiempo real de peso Argentino por ${event.target.value} es de`
+    fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+    .then((res) => {return res.json()})
+    .then((data) => {
+        for (let i = 0; i < data.length; i++) {
+            
+            if (data[i].casa.nombre == event.target.value){
+                dolartiemporeal.value = data[i].casa.compra
+                document.getElementById ('prueba').innerHTML = data[i].casa.compra
+            } 
+        }
+    })
     
+    
+});    
+
+
   
   const lottielupa = document.getElementById('lottie-lupa')
   const quienesSomos = document.getElementById('quienes-somos-animation')
-  quienesSomos.addEventListener('onclick', () =>{
+  quienesSomos.addEventListener('click', () =>{
     lottielupa.classList.toggle('aparecer-lupa')
   })
   console.log(quienesSomos)

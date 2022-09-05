@@ -85,10 +85,22 @@ position: absolute;
 }
 
 .lottie-lupa{
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  
+  animation-name: lupafadeinout;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
 }
+@keyframes lupafadeinout{
+  0% {
+   opacity: 1;
+  }
+ 100% {
+    opacity: 0;
+  }
+}
+
+
 .lottie-lupa.fade{
   opacity: 0;
 }
