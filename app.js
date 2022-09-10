@@ -12,6 +12,13 @@ var animationlupa = bodymovin.loadAnimation({
     autoplay: true,
     path: 'https://assets7.lottiefiles.com/packages/lf20_Fl9YWn.json'
 })
+var animationchart = bodymovin.loadAnimation({
+    container: document.getElementById('lottie-chart'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets7.lottiefiles.com/packages/lf20_3rqwsqnj.json'
+})
 
 
 // Objetos & Array - Listado de cambios //

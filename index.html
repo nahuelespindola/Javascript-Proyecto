@@ -18,8 +18,8 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   
-   
+
+
 </head>
 
 <body class="indexbody d-flex flex-column min-vh-100">
@@ -39,7 +39,7 @@
                <div class="nav ms-auto">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                      <li class="nav-item">
-                        <a id="quienes-somos-animation" class="nav-link" aria-current="page" >Quienes somos</a>
+                        <a id="quienes-somos-animation" class="nav-link" aria-current="page">Quienes somos</a>
                      </li>
                </div>
                </ul>
@@ -50,31 +50,31 @@
    <!-- Fin NavBar Bootstrap -->
    <!-- Section -->
    <section>
-      
-<div class="fondo-quienessomos">
-   <div id="lottie-lupa" class="lupa"></div>
-   <div class="quienes-somos">
-      <div>
-         <h1>Tu casa de conversión</h1>
+
+      <div class="fondo-quienessomos">
+         <div id="lottie-lupa" class="lupa"></div>
+         <div class="quienes-somos">
+            <div>
+               <h1>Tu casa de conversión</h1>
+            </div>
+            <div>
+               <h2>¿Quienes somos?</h2>
+            </div>
+            <div>
+               <h5>El sistema economico argentino suele ser complejo a la hora de comprender <br>
+                  la cantidad de tipos de cambio que existen, por eso brindamos a tu alcance <br>
+                  un sistema de conversión de facil uso.</h5>
+            </div>
+
+         </div>
+         <div class="lottie" id="lottie-animation"></div>
+         <div class="ovalo"></div>
       </div>
-      <div>
-         <h2>¿Quienes somos?</h2>
-      </div>
-      <div>
-         <h5>El sistema economico argentino suele ser complejo a la hora de comprender <br>
-            la cantidad de tipos de cambio que existen, por eso brindamos a tu alcance <br>
-            un sistema de conversión de facil uso.</h5>
-      </div>
-      
-   </div>
-   <div class="lottie" id="lottie-animation"></div>
-   <div class="ovalo"></div>
-</div>
 
 
-</div>
+      </div>
       <div class="conversor">
-         
+
          <div class="form-title">
             <h2 class="selector-tiemporeal">La cotización en tiempo real de peso Argentino por dolar es de</h2>
             <h3 id="tiemporeal"></h3>
@@ -82,7 +82,6 @@
          <div>
             <form class="input">
                <h4 class="cambio">Ingrese el valor que desea convertir</h4>
-               
                <label>
                   <select id="selectIzquierda" class="monedas-izquierda">
                      <option value="ARS">ARS Peso Argentino
@@ -91,40 +90,73 @@
                   <input id="input" type="number" placeholder="Ingrese el valor deseado" required>
                </label>
                <label>
-               <select id="selectDerecha" class="monedas-derecha">
-                  
-                  
-                  <option value="Dolar Oficial">USD Oficial
-                  </option>
-                  <option value="Dolar Blue">USD Blue
-                  </option>
-                  <option value="Dolar Contado con Liqui">Dolar Contado con Liquidación
-                  </option>
-                  <option value="Dolar Bolsa">Dolar Bolsa
-                  </option>
-                  <option value="Dolar turista">Dolar Turista
-                  </option>
-                  <option value="Bitcoin">Bitcoin
-                  </option>  
-                  <input id="output" type="number" placeholder="Es igual a">
-               </select>
-            </label>
+                  <select id="selectDerecha" class="monedas-derecha">
+
+
+                     <option value="Dolar Oficial">USD Oficial
+                     </option>
+                     <option value="Dolar Blue">USD Blue
+                     </option>
+                     <option value="Dolar Contado con Liqui">Dolar Contado con Liquidación
+                     </option>
+                     <option value="Dolar Bolsa">Dolar Bolsa
+                     </option>
+                     <option value="Dolar turista">Dolar Turista
+                     </option>
+                     <option value="Bitcoin">Bitcoin
+                     </option>
+                     <input id="output" type="number" placeholder="Es igual a">
+                  </select>
+               </label>
             </form>
-   
+
          </div>
       </div>
-      
-     
+
+
    </section>
-   <div class="line-charts">
-      <div>
-         <label for="">
-   
-            <canvas id="lineChart" width="400" height="400"></canvas>
-         </label>
+   <label class="label-section">
+      <div class="chart-section">
+         <div>
+            <div id="lottie-chart" class="lottiechart">
+            </div>
+         </div>
+         <div class="line-charts">
+            <label for="">
+               <canvas id="lineChart" width="300" height="300"></canvas>
+            </label>
+         </div>
+         <div class=cuatro-textos>
+            <div>
+               <h4>Facilidad y conveniencia
+               </h4>
+               <h5>Trabajamos para tener al día los datos mas importantes de las finanzas del país</h5>
+            </div>
+            <div>
+               <h4>Compromiso con la seguridad
+               </h4>
+               <h5>Cuidamos con responsabilidad todos los datos personales de nuestros usuarios</h5>
+            </div>
+            <div>
+               <h4>Velocidad y transparencia
+               </h4>
+               <h5>Nuestros sistemas se actualizan constantemente con información de primera mano</h5>
+            </div>
+            <div>
+               <h4>Alcance mundial
+               </h4>
+               <h5>
+                  Realizamos un promedio de 25 remesas por segundo y movemos dinero de Argentina a más de 200 países y
+                  territorios.</h5>
+            </div>
+         </div>
+
+
       </div>
-   </div>
-   
+   </label>
+
+
+
    <!-- Fin Section -->
    <!-- Footer -->
    <footer class="footer mt-auto">
@@ -134,11 +166,11 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
    <script src="app.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-   
-   
 
 
-  
+
+
+
 </body>
 
 
