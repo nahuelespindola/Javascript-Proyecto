@@ -158,16 +158,9 @@ input.addEventListener('input', () => {
 
     
 
-    let condicion = 0
+  
     
-    if(input.value == condicion){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'No coloques letras, solo numeros!',
-            footer: '<a href="">Porque estoy viendo esta alerta?</a>'
-          })
-    }
+    
 
     
 })
